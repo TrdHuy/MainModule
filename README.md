@@ -1,11 +1,11 @@
-- # If MainModule already exit SubModule2
+- # If MainModule already exit SubModule2 (This workaround not keep the history of SubModule2)
 	```
 	├── MainModule
 	│   ├── SubModule1
 	│   └── SubModule2 ---------> need to seprate this module to other repo
 	```
 
-	- ### Create new SubModule2 repo on GitHub, and get the URL:
+	- ### Create new SubModule2 repo on GitHub, and get the URL: 
 	  	```
 		https://github.com/TrdHuy/SubModule2_T1.git
 	   	```
@@ -26,3 +26,21 @@
 		 ```
 
 
+- # If MainModule already exit SubModule3 (This workaround will keep the history of SubModule3)
+	```
+	├── MainModule
+	│   ├── SubModule1
+	│   └── SubModule2 
+ 	│   └── SubModule3 ---------> need to seprate this module to other repo	
+	```
+
+	- ### Create new SubModule2 repo on GitHub, and get the URL: 
+	  	```
+		https://github.com/TrdHuy/SubModule3_T1.git
+	   	```
+	- ### At MainModule folder, run:
+		 ```
+		git filter-repo --path SubModule3/ --to-subdirectory-filter SubModule3 --force
+		git remote add origin https://github.com/TrdHuy/SubModule3_T1.git
+		git push -u origin master
+		 ```
