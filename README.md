@@ -1,3 +1,13 @@
+- ## Clone including sub modules
+	```
+	git clone --recurse-submodules https://github.com/TrdHuy/MainModule.git
+	```
+	#### OR using submodule init
+	```
+	git submodule init
+	git submodule update
+	```
+
 - ## If MainModule already exit SubModule2 (This workaround not keep the history of SubModule2)
 	```
 	├── MainModule
