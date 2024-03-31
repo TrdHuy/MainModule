@@ -39,7 +39,7 @@
 		https://github.com/TrdHuy/SubModule3_T1.git
 	   	```
 	- ### At MainModule folder, run:
- 		- Workaround 1: Keep SubModule3 as root folder	
+ 		- #### Workaround 1: Keep SubModule3 as root folder	
 		 ```
 		 git filter-repo --path SubModule3/ --to-subdirectory-filter SubModule3 --force
 		 git remote add origin https://github.com/TrdHuy/SubModule3_T1.git
@@ -50,7 +50,7 @@
 	 	 │   └── SubModule3	
 		 ``` 
  
- 		- Workaround 2: Bring all the files of SubModule3 to root folder
+ 		- #### Workaround 2: Bring all the files of SubModule3 to root folder
 		 ```
 		 git filter-repo --subdirectory-filter SubModule3/
 		 git remote add origin https://github.com/TrdHuy/SubModule3_T1.git
@@ -62,3 +62,4 @@
 		 │   └── logic2.txt	
 		 │   └── logic3.txt	
 		 ``` 
+		##### 🍄🍄🍄 To use filter-repo may need to install: ``` pip install git-filter-repo ```🍄🍄
